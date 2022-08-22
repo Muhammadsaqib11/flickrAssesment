@@ -74,7 +74,7 @@ const App = () => {
   return (
     <React.Fragment>
 
-<Tabs
+    <Tabs
       defaultActiveKey="home"
       id="uncontrolled-tab-example"
       className="mb-3"
@@ -233,13 +233,13 @@ const App = () => {
         </div>
         </div>
         <nav>
-        <ul >
+        {/* <ul >
                   {pageNumber.map(number => (
                       <li key={number}>
                           <a onClick={() => paginate(number)} href='#'>{number}</a>
                       </li>
                   ))}
-              </ul>
+              </ul> */}
             </nav>
     
     </>
@@ -277,7 +277,9 @@ const App = () => {
         >
           {
             images && images.map((img, key) => (
-              <div className="col-sm-4" key={img.id}>
+          <div className ="row mt-4">
+            <div className="col-sm-4 mt-4"></div>
+                <div className="col-sm-4" key={img.id}>
                 <div className="card h-100" key={img.id}>
                   <img className="card-img-top" src={img.urls.small} alt="Card image cap" />
                   {/* <div className="card-body"> */}
@@ -287,6 +289,8 @@ const App = () => {
                   {/* </div> */}
                 </div>
                 </div>
+                <div className="col-sm-4"></div>
+          </div>
             ))
           }
           </InfiniteScroll>
@@ -309,7 +313,6 @@ const App = () => {
 
     </>
       </Tab>
-
     </Tabs>
 
     </React.Fragment>
